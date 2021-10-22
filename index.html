@@ -16,23 +16,21 @@
     left: -10vw;
     top: -10vw;
 }
-
 @font-face {
-    font-family: "Impact";
-    src: url("/impact.woff") format("woff")
-    url("/impact.ttf") format("TrueType");
+font-family:"anton";
+src:url("https://use.typekit.net/af/df315a/00000000000000007735a122/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/df315a/00000000000000007735a122/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/df315a/00000000000000007735a122/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
 }
-
 @font-face {
-    font-family: "Helvetica Neue Condensed Black";
-    src: url("Helvetica-Neue-Condensed-Black.woff") format("woff")
-    url("Helvetica-Neue-Condensed-Black.ttf") format("TrueType");
+font-family:"poppins";
+src:url("https://use.typekit.net/af/a66c7a/00000000000000007735c1a3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/a66c7a/00000000000000007735c1a3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/a66c7a/00000000000000007735c1a3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
 }
 .fck_ads{
     position:absolute;
     top: 56vw; background-color: #FFA066; 
     color:white;
-    font-family: Impact; 
+    font-family: "anton"; 
     height: 110vw; 
     width: 110vw; 
     left: -10vw;
@@ -46,10 +44,10 @@
 
 .flui_explanation{
     position: absolute;
-    top: 135vw;
+    top: 132.5vw;
     text-align: left;
     width:35vw;
-    font-family: "Helvetica Neue Condensed Black";
+    font-family: "poppins";
     color: #C3C3C3;
     line-height: 3.5vw;
     font-size: 3vw;
@@ -67,17 +65,18 @@
     background-size: 100vw 66vw;
     left: 20vw;
     right:20vw;
+    background-repeat: no-repeat;
 }
 .step_one{
     position: absolute;
     top: 175vw;
-    width: 25vw;
-    font-family: "Helvetica Neue Condensed Black";
+    width: 29vw;
+    font-family: "poppins";
     color: #C3C3C3;
     line-height: 5vw;
     font-size: 5vw;
     text-align: left;
-    left:15vw;
+    left:12vw;
     border-right: 2px solid #C3C3C3;
     padding-right: 0;
 }
@@ -95,7 +94,7 @@
     top: 264vw;
     text-align: left;
     width:35vw;
-    font-family: "Helvetica Neue Condensed Black";
+    font-family: "poppins";
     color: #C3C3C3;
     line-height: 3.5vw;
     font-size: 3vw;
@@ -106,7 +105,7 @@
     position: absolute;
     top: 304vw;
     width: 25vw;
-    font-family: "Helvetica Neue Condensed Black";
+    font-family: "poppins";
     color: #C3C3C3;
     line-height: 5vw;
     font-size: 5vw;
@@ -129,11 +128,27 @@
     top: 385vw;
     text-align: left;
     width:35vw;
-    font-family: "Helvetica Neue Condensed Black";
+    font-family: "poppins";
     color: #C3C3C3;
     line-height: 3.5vw;
     font-size: 3vw;
     left:5vw;
+}
+.final_email{
+    background-color: #FFA066;
+    color: white;
+    font-family: "poppins";
+    font-size: 3vw;
+    border-radius: 4vw;
+    padding: 2vw;
+    position: absolute;
+    top:580vw;
+    width:20vw;
+    left: 37vw;
+    z-index: 10;
+    text-align: center;
+    text-decoration: none;
+
 }
 
 
@@ -199,7 +214,6 @@
             <span style="color:#FFA066; font-size: 140%;">3.</span><br>
             Manage<br>your<br>campaign
         </div>
-        <!--file:////Users/carsoncummins/Documents/flui2/Code-->
         <img class="step_one_image" style="top:420vw"src="overview.png">
         <img class="step_one_image" style="top:447vw" src="analytics.png">
         <img class="step_one_image" style="top:474vw" src="collabs.png">
@@ -207,10 +221,12 @@
         <div class="step_one_text" style="top:501vw">
             Flui's AI takes care of <span style="color:#62C480">finding influencers</span>, 
             scoring their reach, and <span style="color:#66C4FF">approving their content</span>. 
-            We’ll even give you <span style="color:#FF6678">real time analytics</span> 
+            We'll even give you <span style="color:#FF6678">real time analytics</span> 
             across all of your collaborations.
         </div>
-
+        <a class="final_email" id="final_email" href="mailto:hello@flui.co">
+            CONTACT US
+        </a>
     </body>
     <script>
         let lastKnownScrollPosition = 0;
@@ -287,11 +303,12 @@
         add_scroll_animation($("#FA"),"padding-left",15,4,110,250,"vw");
 
 
-        add_scroll_animation($("#step_one"),"top",185,266,350,512, "vw");
+        add_scroll_animation($("#step_one"),"top",185,268,350,516, "vw");
 
-        add_scroll_animation($("#step_two"),"top",304,385,588,750, "vw");
+        add_scroll_animation($("#step_two"),"top",304,387,588,754, "vw"); 
 
-        add_scroll_animation($("#step_three"),"top",420,501,825,987,"vw");
+
+        add_scroll_animation($("#step_three"),"top",420,503,825,991,"vw");
 
         var vw =Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 200;
         let gv_start_str = $("#go_viral").css("top");
@@ -300,6 +317,8 @@
         add_scroll_animation($("#go_viral"),"left",20,0,gv_start-30,gv_start,"vw");
         add_scroll_animation($("#go_viral"),"right",20,0,gv_start-30,gv_start,"vw");
         add_scroll_animation($("#go_viral"),"width",60,100,gv_start-30,gv_start,"vw");
+
+        add_scroll_animation($('#final_email'),"top",gv_start/2+25,gv_start/2 + 70,gv_start,gv_start+90,"vw")
 
         add_scroll_event($("#overlay_center"),"display","block","none",130);
         
