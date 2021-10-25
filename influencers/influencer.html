@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" type="image/x-icon" href="https://flui.co/favicon.ico" />
+    <script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
+    <style>
+        html, body {
+            overflow-x: hidden;
+            background-image: url('marbling.png');
+        background-size: 97vw 56vw;
+        background-repeat: no-repeat;
+        padding: 0;
+        margin: 0;
+}
+.overlay_center{
+    display: block;
+    position: fixed;
+    left: -10vw;
+    top: -10vw;
+}
+@font-face {
+font-family:"anton";
+src:url("https://use.typekit.net/af/df315a/00000000000000007735a122/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/df315a/00000000000000007735a122/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/df315a/00000000000000007735a122/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
+}
+@font-face {
+font-family:"poppins";
+src:url("https://use.typekit.net/af/a66c7a/00000000000000007735c1a3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/a66c7a/00000000000000007735c1a3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/a66c7a/00000000000000007735c1a3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;
+}
+.fck_ads{
+    position:absolute;
+    top: 56vw; background-color: #FFA066; 
+    color:white;
+    font-family: "anton"; 
+    height: 110vw; 
+    width: 110vw; 
+    left: -10vw;
+    text-align: left;
+    font-size: 25vw;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left:15vw;
+    z-index: 1;
+}
+
+.flui_explanation{
+    position: absolute;
+    top: 132.5vw;
+    text-align: left;
+    width:35vw;
+    font-family: "poppins";
+    color: #C3C3C3;
+    line-height: 3.5vw;
+    font-size: 3vw;
+    left:50vw;
+}
+
+
+.go_viral{
+    position:absolute;
+    top:460vw;
+    width:60vw;
+    height:100vh;
+    background-image: url("getpaid.png");
+    background-position: center top;
+    background-size: 100vw 66vw;
+    left: 20vw;
+    right:20vw;
+    background-repeat: no-repeat;
+}
+.step_one{
+    position: absolute;
+    top: 175vw;
+    width: 29vw;
+    font-family: "poppins";
+    color: #C3C3C3;
+    line-height: 5vw;
+    font-size: 5vw;
+    text-align: left;
+    left:12vw;
+    border-right: 2px solid #C3C3C3;
+    padding-right: 0;
+}
+.step_one_image{
+    position: absolute;
+    top:183vw;
+    left: 50vw;
+    width: 40vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.step_one_text{
+    position: absolute;
+    top: 237vw;
+    text-align: left;
+    width:35vw;
+    font-family: "poppins";
+    color: #C3C3C3;
+    line-height: 3.5vw;
+    font-size: 3vw;
+    left:50vw;
+}
+
+.step_two{
+    position: absolute;
+    top: 277vw;
+    width: 25vw;
+    font-family: "poppins";
+    color: #C3C3C3;
+    line-height: 5vw;
+    font-size: 5vw;
+    text-align: left;
+    left:50vw;
+    border-left: 2px solid #C3C3C3;
+    padding-left: 5vw;
+}
+.step_two_image{
+    position: absolute;
+    top:277vw;
+    left: 5vw;
+    width: 40vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.step_two_text{
+    position: absolute;
+    top: 331vw;
+    text-align: left;
+    width:35vw;
+    font-family: "poppins";
+    color: #C3C3C3;
+    line-height: 3.5vw;
+    font-size: 3vw;
+    left:5vw;
+}
+.final_email{
+    background-color: rgba(255, 160, 102,.7);
+    color: white;
+    font-family: "poppins";
+    font-size: 3vw;
+    border-radius: 4vw;
+    padding: 2vw;
+    position: absolute;
+    top:580vw;
+    width:20vw;
+    left: 37vw;
+    z-index: 10;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+    </style>
+    <body>
+        <div id="c_">
+            <div id = "overlay_center" class = "overlay_center">
+                <img src="FLUI_Overlay.svg" style="width:120vw">
+            </div>
+        </div>
+        <div id = "FA" class=fck_ads>
+            ADS<br>SUCK
+        </div>
+        <div id = "flui_explanation" class="flui_explanation">
+            Ads <span style="color:#66C4FF">suck</span>. Flui doesn't.By 
+            using <span style="color:#66C4FF">AI</span> to help you 
+            collaborate with 
+            companies <span style="color:#66C4FF">specific to 
+                your niche</span>, you will 
+            monetize <span style="color:#66C4FF">without 
+                annoying</span> your followers.
+
+        </div>
+            <div id="go_viral" class = "go_viral" ></div>
+
+        <div id="step_one" class = "step_one">
+            <span style="color:#FFA066; font-size: 140%;">1.</span><br>
+            Create<br>Your<br>Profile
+        </div>
+
+        <img class="step_one_image" src="signup.png">
+        <img class="step_one_image" style="top:210vw" src="profile.png">
+
+        <div class="step_one_text">
+            Create you Flui profile and link your TikTok, Instagram, Twitter and YouTube accounts in <span style="color:#66C4FF">seconds</span>. It's
+            <span style="color:#66C4FF">easy, free and fast</span>.
+        </div>
+
+        <div class="step_two" id="step_two">
+            <span style="color:#FFA066; font-size: 140%;">2.</span><br>
+           Connect<br>With<br>Companies
+        </div>
+
+        <img class="step_two_image" src="collabs.png">
+        <img class="step_two_image" style="top:304vw" src="messages.png">
+
+        <div class="step_two_text">
+            Companies similar to your niche will contact you. Just <span style="color:#66C4FF">relax</span> and watch <span style="color:#66C4FF">dozens</span> of collaboration requests come in.
+        </div>
+
+
+        <div id="step_three" class = "step_one" style="top:420vw">
+            <span style="color:#FFA066; font-size: 140%;">3.</span><br>
+            Get<br>Paid
+        </div>
+        <img class="step_one_image" style="top:366vw"src="financials.png">
+        <img class="step_one_image" style="top:393vw" src="request.png">
+
+        <div class="step_one_text" style="top:420vw">
+            Flui's influencers can make <span style="color:#66C4FF">$5-$250</span> per post. You get paid through the site, and by the site. <span style="color:#66C4FF">Don't get screwed</span>.
+        </div>
+        <a class="final_email" id="final_email" href="mailto:hello@flui.co">
+            CONTACT US
+        </a>
+    </body>
+    <script>
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+        let animations = [];
+        let events = []
+
+        function in_range(i,low,high){
+            return i>=low&&i<=high
+        }
+
+        class scrollAnimation{
+            constructor(element, key,start_value,end_value,start_at, end_at,units){
+                this.element = element;
+                this.key = key;
+                this.start_value = start_value;
+                this.end_value = end_value;
+                this.start_at = start_at;
+                this.units = units;
+                this.end_at = end_at;
+            }
+            setValue(scrollPos){
+                //convert scroll pos in terms of vw
+                var vw =Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 200;
+                var y_vw = scrollPos/vw;
+
+                if(in_range(y_vw,this.start_at,this.end_at)){
+                    var amount = (y_vw - this.start_at) / (this.end_at - this.start_at);
+                    var delta = amount * (this.end_value - this.start_value);
+                    this.element.css(this.key," "+(this.start_value + delta)+this.units);
+                }else if(y_vw < this.start_at){
+                    this.element.css(this.key," "+this.start_value + this.units);
+                }else if(y_vw>this.end_at){
+                    this.element.css(this.key," "+this.end_value+this.units);
+                }
+            }
+        }
+        class scrollEvent{
+            constructor(element,key,after_value, before_value,event_at){
+                this.element = element;
+                this.key = key;
+                this.before_value = before_value;
+                this.after_value = after_value;
+                this.event_at = event_at;
+            }
+            setValue(scrollPos){
+                var vw =Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 200;
+                var y_vw = scrollPos/vw;
+                if(y_vw>this.event_at){
+                    this.element.css(this.key,this.before_value);
+                }else{
+                    this.element.css(this.key,this.after_value);
+                }
+            }
+        }
+
+        function add_scroll_animation(element, key, start_value, end_value, start_at, end_at,units){
+            animations.push(
+                new scrollAnimation(element,key,start_value,end_value,start_at,end_at,units)
+            );
+        }
+        function add_scroll_event(element, key, before_value, after_value, event_at){
+            events.push(
+                new scrollEvent(element,key,before_value,after_value,event_at)
+            );
+        }
+
+
+        add_scroll_animation($("#FA"),"width",110,25,110,250,"vw");
+        add_scroll_animation($("#FA"),"top",55,133,110,250,"vw");
+        add_scroll_animation($("#FA"),"left",-10,15,110,250,"vw");
+        add_scroll_animation($("#FA"),"height",110,30,110,250,"vw");
+        add_scroll_animation($("#FA"),"font-size",25,10,110,250,"vw");
+        add_scroll_animation($("#FA"),"padding-left",15,4,110,250,"vw");
+
+
+        add_scroll_animation($("#step_one"),"top",185,241,350,462, "vw");
+
+        add_scroll_animation($("#step_two"),"top",277,333,534,646, "vw"); 
+
+
+        add_scroll_animation($("#step_three"),"top",371,424,717,823,"vw");
+
+        var vw =Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) / 200;
+        let gv_start_str = $("#go_viral").css("top");
+        let gv_start = parseInt(gv_start_str.substring(0,gv_start_str.length-2))/vw;
+        add_scroll_animation($("#go_viral"),"top",gv_start/2,gv_start/2 + 45,gv_start,gv_start+90,"vw");
+        add_scroll_animation($("#go_viral"),"left",20,0,gv_start-100,gv_start,"vw");
+        add_scroll_animation($("#go_viral"),"right",20,0,gv_start-100,gv_start,"vw");
+        add_scroll_animation($("#go_viral"),"width",60,100,gv_start-100,gv_start,"vw");
+
+        add_scroll_animation($('#final_email'),"top",gv_start/2+25,gv_start/2 + 70,gv_start,gv_start+90,"vw")
+
+        add_scroll_event($("#overlay_center"),"display","block","none",130);
+        
+
+        function scroll_event(scrollPos) {
+            for(let i = 0; i<animations.length; i++){
+                animations[i].setValue(scrollPos);
+            }
+            for(let i = 0; i<events.length; i++){
+                events[i].setValue(scrollPos);
+            }
+        }
+
+        document.addEventListener('scroll', function(e) {
+        lastKnownScrollPosition = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+            scroll_event(lastKnownScrollPosition);
+            ticking = false;
+            });
+
+            ticking = true;
+        }
+        });
+    </script>
+    
+</html>
